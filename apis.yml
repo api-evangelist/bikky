@@ -1,0 +1,61 @@
+aid: bikky
+name: Bikky
+description: >-
+  Bikky is a New York-based Customer Data Platform (CDP) built exclusively for
+  large, multi-unit restaurant brands, serving thousands of locations for
+  companies such as Bojangles, MOD Pizza, Dave's Hot Chicken, and Long John
+  Silver's. By integrating with point-of-sale, online ordering, payment, and
+  loyalty systems, Bikky builds a single source of truth on guests, cleaning,
+  standardizing, and de-duplicating data to reveal behavior, frequency, lifetime
+  value, and menu performance across channels. Bikky offers push-button API
+  integrations with leading ordering, loyalty, and marketing providers, plus
+  Snowflake data shares, SFTP, and CSV import for data exchange. It does not
+  appear to publish a public, self-service developer API or documentation;
+  integration and data access are arranged directly with Bikky.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Restaurant
+  - Customer Data Platform
+  - Guest Analytics
+  - Integrations
+  - Marketing
+  - Loyalty
+url: https://raw.githubusercontent.com/api-evangelist/bikky/refs/heads/main/apis.yml
+created: '2026-06-02'
+modified: '2026-06-02'
+specificationVersion: '0.19'
+apis:
+  - aid: bikky:rest-api
+    name: Bikky Integrations
+    description: >-
+      Bikky provides push-button API integrations with leading POS, online
+      ordering, loyalty, and marketing providers, sending data in real time for
+      most POS and ordering sources and nightly for reservations and loyalty.
+      Additional data exchange options include Snowflake data shares, SFTP, and
+      CSV upload. No public API reference, base URL, or authentication
+      documentation is published; integration access is arranged directly with
+      Bikky.
+    humanURL: https://www.bikky.com/integrations
+    tags:
+      - Integrations
+      - Guest Data
+    properties:
+      - type: Documentation
+        url: https://www.bikky.com/integrations
+common:
+  - type: Website
+    url: https://bikky.com/
+  - type: Documentation
+    url: https://www.bikky.com/integrations
+  - type: Login
+    url: https://app.bikky.com
+  - type: Support
+    url: https://www.bikky.com/learn-more
+  - type: Blog
+    url: https://www.bikky.com/blog
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/bikky-inc
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
