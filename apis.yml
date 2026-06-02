@@ -25,6 +25,29 @@ url: https://raw.githubusercontent.com/api-evangelist/bikky/refs/heads/main/apis
 created: '2026-06-02'
 modified: '2026-06-02'
 specificationVersion: '0.19'
+features:
+  - name: Unified Guest Profiles
+    description: >-
+      Cleans, standardizes, and de-duplicates guest data from across channels
+      into a single source of truth covering behavior, frequency, lifetime
+      value, and menu performance.
+  - name: Push-Button API Integrations
+    description: >-
+      Pre-built connectors to leading POS, online ordering, loyalty, and
+      marketing providers that ingest data in real time for most POS and
+      ordering sources and nightly for reservations and loyalty.
+  - name: Snowflake Data Shares
+    description: >-
+      Direct, secure data sharing for brands that operate their own Snowflake
+      data warehouse, with no copying or movement of data required.
+  - name: SFTP and CSV Data Exchange
+    description: >-
+      Push and pull SFTP integrations plus direct CSV upload for core data
+      types where a push-button integration is not available.
+  - name: Data Assistant
+    description: >-
+      Guided analytics surface for exploring guest behavior, menu performance,
+      and campaign impact without requiring SQL or a data team.
 apis:
   - aid: bikky:rest-api
     name: Bikky Integrations
@@ -56,6 +79,33 @@ common:
     url: https://www.bikky.com/blog
   - type: LinkedIn
     url: https://www.linkedin.com/company/bikky-inc
+integrations:
+  - name: Ordering
+    description: 'Online and digital ordering platforms, including Clover, Olo, and Qu.'
+  - name: Point of Sale
+    description: >-
+      Cloud and on-premise POS systems across both modern and legacy
+      providers, sending guest and transaction data in real time.
+  - name: Third Party Delivery
+    description: Marketplace and delivery platforms feeding off-premise order data into guest profiles.
+  - name: Catering
+    description: First-party catering integrations capturing large-order and B2B guest activity.
+  - name: Payments
+    description: 'Payment processors, including Fiserv, FreedomPay, and Heartland.'
+  - name: Loyalty
+    description: 'Loyalty and rewards platforms, including Punchh, Sparkfly, and Thanx, synced nightly.'
+  - name: Feedback
+    description: 'Guest feedback and survey platforms, including Ovation and Tattle.'
+  - name: Marketing
+    description: 'Marketing and messaging platforms, including Braze, Attentive, and Klaviyo.'
+  - name: Reservations
+    description: 'Reservation platforms, including OpenTable, Resy, and Tock, synced nightly.'
+solutions:
+  - name: Multi-Unit Restaurant Brands
+    description: >-
+      Customer data platform purpose-built for large, multi-location restaurant
+      brands such as Bojangles, MOD Pizza, Dave's Hot Chicken, and Long John
+      Silver's, unifying guest data across thousands of locations.
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
