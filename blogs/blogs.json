@@ -1,0 +1,21 @@
+{
+  "repo": "bikky",
+  "feeds": [
+    {
+      "source": "https://www.bikky.com/blog",
+      "feed_url": "https://www.bikky.com/blog",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    },
+    {
+      "source": "https://www.bikky.com/learn-more",
+      "feed_url": "https://www.bikky.com/learn-more",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    }
+  ],
+  "post_count": 1,
+  "fetched": "2026-06-14T20:42:17Z"
+}
