@@ -34,7 +34,7 @@ tags:
   - Loyalty
 url: https://raw.githubusercontent.com/api-evangelist/bikky/refs/heads/main/apis.yml
 created: '2026-06-02'
-modified: '2026-06-02'
+modified: '2026-08-13'
 specificationVersion: '0.19'
 features:
   - name: Unified Guest Profiles
@@ -80,6 +80,18 @@ apis:
 common:
   - type: DomainSecurity
     url: security/bikky-domain-security.yml
+  - type: TrustCenter
+    url: security/bikky-trust-center.yml
+  - type: Compliance
+    url: https://trust.bikky.com/
+  - type: Conformance
+    url: conformance/bikky-conformance.yml
+  - type: Plans
+    url: plans/bikky-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/bikky-rate-limits.yml
+  - type: LLMsTxt
+    url: llms/bikky-llms.txt
   - type: Website
     url: https://bikky.com/
   - type: Documentation
@@ -90,6 +102,10 @@ common:
     url: https://www.bikky.com/learn-more
   - type: Blog
     url: https://www.bikky.com/blog
+  - type: TermsOfService
+    url: https://www.bikky.com/terms
+  - type: PrivacyPolicy
+    url: https://www.bikky.com/privacy-policy
   - type: LinkedIn
     url: https://www.linkedin.com/company/bikky-inc
 integrations:
@@ -122,3 +138,27 @@ solutions:
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
+x-enrichment:
+  date: '2026-08-13'
+  status: minimal
+  artifacts_added: 6
+  pass: local-v1
+x-coverage:
+  state: gated
+  reason: sales-gate
+  detail: >-
+    Bikky markets "push-button API integrations" and a live API host is running —
+    api.bikky.com is an AWS load balancer that answers on every request — but no
+    reference, spec or key-issuance path is published anywhere, and the
+    integrations page routes data access through "our sales and engineering team"
+    before a contract is signed.
+  evidence:
+    - url: https://api.bikky.com/openapi.json
+      status: 404
+    - url: https://www.bikky.com/developers
+      status: 404
+    - url: https://www.bikky.com/integrations
+      status: 200
+    - url: https://www.bikky.com/pricing
+      status: 404
+  checked: '2026-08-13'
