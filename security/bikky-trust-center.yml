@@ -1,0 +1,51 @@
+generated: '2026-08-13'
+method: searched
+probe: true
+url: https://trust.bikky.com/
+platform: Vanta
+certifications:
+  - SOC 2
+frameworks_referenced:
+  - NIST (system design and security policies stated as aligned with NIST best practices)
+practices_published:
+  - Customer data encrypted at rest
+  - Regular vulnerability scanning
+  - Regular penetration tests
+  - Regular policy reviews
+  - Customers own their data; stated compliance with US data privacy regulations
+evidence:
+  - source: https://trust.bikky.com/
+    http_status: 200
+    kind: trust-center
+    detail: >-
+      Serves <title>Bikky Trust Center</title> and og:title "Bikky Trust Center"
+      from the Vanta trust-report bundle (assets.vanta.com index-trust-report).
+      DNS confirms provider ownership: trust.bikky.com is a CNAME to
+      662bd7f45360cc947af486cc.cname.vantatrust.com.
+  - source: https://www.bikky.com/
+    http_status: 200
+    kind: security-section
+    detail: >-
+      Homepage "Security & privacy" section states "SOC 2 Certified — We're proud
+      to be SOC 2 certified, the leading industry standard for enterprise-level
+      protection", "All customer data is fully encrypted at rest and we undergo
+      regular vulnerability scanning, penetration tests, and policy reviews", and
+      links to the trust center at https://trust.bikky.com/.
+machine_readability:
+  readable: false
+  note: >-
+    The Vanta trust report renders client-side. Its GraphQL backend at
+    /graphql rejects anonymous queries with "Missing `signature` or `signedAt`"
+    (HTTP 400), so the certification list, audit reports and subprocessors are
+    not retrievable without a signed session. The SOC 2 certification recorded
+    above is taken from the provider's own homepage copy, not from the trust
+    center DOM.
+vulnerability_disclosure:
+  published: false
+  note: >-
+    Bikky publishes security PRACTICES (scanning, pen tests) but no channel for
+    third parties to REPORT a vulnerability — no security.txt on any host, no
+    /security or /responsible-disclosure page, no bug bounty program on
+    HackerOne/Bugcrowd/Intigriti, and no security@ address in the privacy policy
+    or terms (the only published address is support@bikky.com). No
+    VulnerabilityDisclosure or Security pointer is wired as a result.

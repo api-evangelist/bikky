@@ -1,0 +1,32 @@
+generated: '2026-08-13'
+method: searched
+source: https://www.bikky.com/integrations
+limit_count: 0
+headers: []
+exhaustion_status: null
+note: >-
+  No rate limits are published, because no public API is published. Bikky has no
+  developer portal, API reference or documentation host (docs./developer./
+  developers.bikky.com do not resolve), so there is no page on which a limit,
+  quota, burst or throttling header could be documented. The only cadence
+  information Bikky publishes is ingest frequency for the integrations it
+  CONSUMES from partners — "real time for most POS and online ordering", and
+  "nightly" for reservations and loyalty — which is a data-freshness SLA on
+  inbound connectors, not a rate limit on an API Bikky exposes. It is recorded
+  under `ingest_cadence` below rather than as a limit, so it is never miscounted
+  as a published rate-limit signal.
+limits: []
+ingest_cadence:
+  - sources: [point of sale, online ordering]
+    frequency: real-time
+    source_url: https://www.bikky.com/integrations
+  - sources: [reservations, loyalty]
+    frequency: nightly
+    source_url: https://www.bikky.com/integrations
+evidence:
+  - url: https://www.bikky.com/integrations
+    status: 200
+  - url: https://www.bikky.com/docs
+    status: 404
+  - url: https://www.bikky.com/developers
+    status: 404

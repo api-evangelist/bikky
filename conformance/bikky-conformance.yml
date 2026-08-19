@@ -1,0 +1,58 @@
+generated: '2026-08-13'
+method: searched
+source: https://www.bikky.com/ + https://trust.bikky.com/
+note: >-
+  Bikky publishes no machine-readable API contract, so no protocol-level
+  standard can be asserted from a spec. Every entry below is either a published
+  organizational compliance claim (verified on Bikky's own pages) or an honest
+  "not established" — nothing here is inferred from a specification, because
+  there is none to read.
+standards:
+  - id: soc2
+    conforms: true
+    evidence: >-
+      "SOC 2 Certified" stated in the Security & privacy section of
+      https://www.bikky.com/ (HTTP 200) and a Vanta-hosted trust center at
+      https://trust.bikky.com/ (HTTP 200). The audit report itself is behind the
+      trust center's request flow and was not retrieved.
+  - id: nist-best-practices
+    conforms: claimed
+    evidence: >-
+      "Bikky's system design and security policies are aligned with National
+      Institute of Standards and Technology (NIST) best practices" —
+      https://www.bikky.com/. Self-asserted alignment, not a certification.
+  - id: us-state-privacy
+    conforms: claimed
+    evidence: >-
+      "Bikky customers own their data and we're fully compliant with all US data
+      privacy regulations" — https://www.bikky.com/. The privacy policy at
+      https://www.bikky.com/privacy-policy (HTTP 200) carries State Law Privacy
+      Rights sections.
+  - id: iso-27001
+    conforms: false
+    evidence: not claimed on any Bikky page probed
+  - id: pci-dss
+    conforms: false
+    evidence: >-
+      not claimed. Bikky ingests data from payment processors (Fiserv,
+      FreedomPay, Heartland) but does not present itself as a card processor.
+  - id: hipaa
+    conforms: false
+    evidence: not claimed; out of scope for a restaurant CDP
+  - id: fedramp
+    conforms: false
+    evidence: not claimed
+  - id: oauth2
+    conforms: unknown
+    evidence: >-
+      no published OpenAPI securitySchemes and no OAuth documentation; all
+      /.well-known/oauth-authorization-server probes returned 404
+  - id: oidc
+    conforms: unknown
+    evidence: /.well-known/openid-configuration returned 404 on every host
+  - id: rfc9457-problem-details
+    conforms: unknown
+    evidence: no published contract or error reference to read
+  - id: rfc8594-sunset-header
+    conforms: unknown
+    evidence: no published deprecation or versioning policy

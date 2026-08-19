@@ -1,0 +1,26 @@
+generated: '2026-08-13'
+method: searched
+source: https://www.bikky.com/sitemap.xml + https://www.bikky.com/pricing
+plan_count: 0
+currency: null
+pricing_model: sales-negotiated
+note: >-
+  Bikky publishes no pricing at all. https://www.bikky.com/pricing returns HTTP
+  404 and no pricing, plans or packaging URL appears anywhere in
+  https://www.bikky.com/sitemap.xml (91 URLs — product pages, blog, press
+  releases and case studies only). Every conversion path on the site is "Book a
+  demo" or "Learn more", and the integrations page states that "Our sales and
+  engineering team will happily explore how we can access the data...before you
+  sign a contract with us". Pricing for this enterprise multi-unit restaurant
+  CDP is quoted per brand through sales. This is a recorded zero, not an
+  unchecked field.
+plans: []
+evidence:
+  - url: https://www.bikky.com/pricing
+    status: 404
+  - url: https://www.bikky.com/sitemap.xml
+    status: 200
+    detail: no pricing/plans URL present
+  - url: https://www.bikky.com/integrations
+    status: 200
+    detail: data access arranged with sales and engineering prior to contract

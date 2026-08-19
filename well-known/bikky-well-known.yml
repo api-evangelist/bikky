@@ -1,0 +1,90 @@
+generated: '2026-08-13'
+method: probed
+source: live HTTPS probes of every Bikky host resolved from DNS
+note: >-
+  Every /.well-known/ path probed returned 404 on every Bikky host. No document
+  was served, so NO WellKnown or SecurityTxt pointer is wired into apis.yml —
+  this file records a measured absence, not a discovery surface. app.bikky.com
+  is a Next.js console on Vercel and answers 404 with an HTML shell for unknown
+  paths; those are recorded as html-shell misses, not documents.
+hosts_probed:
+  - host: https://www.bikky.com
+    role: marketing website
+    resolves: true
+  - host: https://bikky.com
+    role: apex website
+    resolves: true
+  - host: https://app.bikky.com
+    role: customer console (Next.js on Vercel, robots Disallow /)
+    resolves: true
+  - host: https://api.bikky.com
+    role: >-
+      live AWS ALB backing the console (server: awselb/2.0). Answers HTTP 404
+      text/plain with a zero-length body on every path probed, including the
+      root. No undocumented public surface was exposed.
+    resolves: true
+  - host: https://trust.bikky.com
+    role: Vanta-hosted trust center (CNAME cname.vantatrust.com)
+    resolves: true
+hosts_not_resolving:
+  - docs.bikky.com
+  - developer.bikky.com
+  - developers.bikky.com
+  - data.bikky.com
+  - status.bikky.com
+documents:
+  - path: /.well-known/security.txt
+    status: 404
+    hosts: [www.bikky.com, bikky.com, app.bikky.com, api.bikky.com]
+  - path: /.well-known/openid-configuration
+    status: 404
+    hosts: [www.bikky.com, bikky.com, app.bikky.com, api.bikky.com]
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    hosts: [www.bikky.com, bikky.com, app.bikky.com, api.bikky.com]
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    hosts: [api.bikky.com]
+  - path: /.well-known/api-catalog
+    status: 404
+    hosts: [www.bikky.com, bikky.com, app.bikky.com, api.bikky.com]
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    hosts: [www.bikky.com, bikky.com, app.bikky.com, api.bikky.com]
+  - path: /.well-known/agent-card.json
+    status: 404
+    hosts: [www.bikky.com, bikky.com, app.bikky.com, api.bikky.com]
+  - path: /.well-known/agent.json
+    status: 404
+    hosts: [www.bikky.com, bikky.com, app.bikky.com, api.bikky.com]
+contract_discovery:
+  note: >-
+    Full STEP 0b contract discovery was run before recording "no published
+    contract". Nothing was found, so no openapi/, graphql/, mcp/, a2a/ or
+    asyncapi/ artifact was written.
+  openapi:
+    probed:
+      - /openapi.json
+      - /openapi.yaml
+      - /swagger.json
+      - /swagger
+      - /v1/openapi.json
+      - /api/openapi.json
+      - /api-docs
+      - /docs
+      - /docs/json
+      - /redoc
+    hosts: [api.bikky.com, www.bikky.com, bikky.com, app.bikky.com]
+    result: 404 on every path/host combination
+  graphql:
+    probed: https://api.bikky.com/graphql
+    status: 404
+    result: no GraphQL surface
+  mcp:
+    probed: [https://api.bikky.com/mcp, https://api.bikky.com/sse]
+    status: 404
+    result: no MCP server published or discoverable
+  llms_txt:
+    probed: [https://www.bikky.com/llms.txt, https://app.bikky.com/llms.txt, https://api.bikky.com/llms.txt]
+    status: 404
+    result: none served; llms/bikky-llms.txt is generated from this catalog
