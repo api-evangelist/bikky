@@ -29,6 +29,13 @@ tags:
   - Restaurant
   - Customer Data Platform
   - Guest Analytics
+  - Integration
+  - Marketing
+  - Loyalty
+tags_raw:
+  - Restaurant
+  - Customer Data Platform
+  - Guest Analytics
   - Integrations
   - Marketing
   - Loyalty
@@ -72,6 +79,9 @@ apis:
       Bikky.
     humanURL: https://www.bikky.com/integrations
     tags:
+      - Integration
+      - Guest Data
+    tags_raw:
       - Integrations
       - Guest Data
     properties:
