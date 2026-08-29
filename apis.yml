@@ -51,6 +51,8 @@ tags_raw:
   - Marketing
   - Loyalty
 url: https://raw.githubusercontent.com/api-evangelist/bikky/refs/heads/main/apis.yml
+x-api-posture: no-product-api
+x-api-posture-basis: observed
 created: '2026-06-02'
 modified: '2026-08-13'
 specificationVersion: '0.23'
