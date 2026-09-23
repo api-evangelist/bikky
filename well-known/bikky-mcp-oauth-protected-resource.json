@@ -1,0 +1,1 @@
+{"resource":"https://mcp.bikky.com/mcp","authorization_servers":["https://login.bikky.com/"],"scopes_supported":["offline_access"],"bearer_methods_supported":["header"]}
