@@ -1,4 +1,4 @@
-# Bikky (bikky)
+# Bikky
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,75 +66,108 @@
 
 Bikky is a New York-based Customer Data Platform (CDP) built exclusively for large, multi-unit restaurant brands, serving thousands of locations for companies such as Bojangles, MOD Pizza, Dave's Hot Chicken, and Long John Silver's. By integrating with point-of-sale, online ordering, payment, and loyalty systems, Bikky builds a single source of truth on guests, cleaning, standardizing, and de-duplicating data to reveal behavior, frequency, lifetime value, and menu performance across channels. Bikky offers push-button API integrations with leading ordering, loyalty, and marketing providers, plus Snowflake data shares, SFTP, and CSV import for data exchange. It does not appear to publish a public, self-service developer API or documentation; integration and data access are arranged directly with Bikky.
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/bikky/refs/heads/main/apis.yml)
+**Areas:** Restaurant · Customer Data Platform · Guest Analytics · Integration · Marketing · Loyalty
 
-**Run:** [Capabilities Using Naftiko](https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=company-api-evangelist&utm_content=repo)
+## Bikky on APIs.io
 
-## Tags:
+Everything profiled for Bikky is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/bikky/](https://apis.io/providers/bikky/)** — or go straight to one of the APIs or properties below.
 
- - Restaurant, Customer Data Platform, Guest Analytics, Integrations, Marketing, Loyalty
+### APIs (1)
 
-## Timestamps
+- [Bikky Integrations](https://apis.io/apis/bikky/rest-api/) — Bikky provides push-button API integrations with leading POS, online ordering, loyalty, and marketing providers, sending data in real time for most POS and…
 
-- **Created:** 2026-06-02
-- **Modified:** 2026-06-02
+### Published properties
 
-## APIs
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-### Bikky Integrations
-Bikky provides push-button API integrations with leading POS, online ordering, loyalty, and marketing providers, sending data in real time for most POS and ordering sources and nightly for reservations and loyalty. Additional data exchange options include Snowflake data shares, SFTP, and CSV upload. No public API reference, base URL, or authentication documentation is published; integration access is arranged directly with Bikky.
+#### MCP servers (1)
 
-**Human URL:** [https://www.bikky.com/integrations](https://www.bikky.com/integrations)
+Model Context Protocol servers that expose the API to agents.
 
-#### Tags:
+- [bikky](https://apis.io/servers/bikky/bikky/)
 
- - Integrations, Guest Data
+#### Security (2)
 
-#### Properties
+Authentication, trust centre, and vulnerability disclosure.
 
-- [Documentation](https://www.bikky.com/integrations)
+- [Bikky Domain Security](https://apis.io/security/bikky/bikky-domain-security/)
+- [Bikky Trust Center](https://apis.io/security/bikky/bikky-trust-center/)
 
-## Common Properties
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Bikky Plans Pricing](https://apis.io/plans/bikky/bikky-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Bikky Rate Limits](https://apis.io/rate-limits/bikky/bikky-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://bikky.com/)
 - [Documentation](https://www.bikky.com/integrations)
-- [Login](https://app.bikky.com)
 - [Support](https://www.bikky.com/learn-more)
 - [Blog](https://www.bikky.com/blog)
-- [LinkedIn](https://www.linkedin.com/company/bikky-inc)
+- [Compliance](https://trust.bikky.com/)
+- [Terms of service](https://www.bikky.com/terms)
+- [Privacy policy](https://www.bikky.com/privacy-policy)
 
-## Features
+## API Evangelist rating
 
-| Name | Description |
-|------|-------------|
-| Unified Guest Profiles | Cleans, standardizes, and de-duplicates guest data from across channels into a single source of truth covering behavior, frequency, lifetime value, and menu performance. |
-| Push-Button API Integrations | Pre-built connectors to leading POS, online ordering, loyalty, and marketing providers that ingest data in real time for most POS and ordering sources and nightly for reservations and loyalty. |
-| Snowflake Data Shares | Direct, secure data sharing for brands that operate their own Snowflake data warehouse, with no copying or movement of data required. |
-| SFTP and CSV Data Exchange | Push and pull SFTP integrations plus direct CSV upload for core data types where a push-button integration is not available. |
-| Data Assistant | Guided analytics surface for exploring guest behavior, menu performance, and campaign impact without requiring SQL or a data team. |
+**Kin Score 23.0** — emerging · rubric 0.25.0 · scored 2026-10-23
 
-## Integrations
+| Facet | Score |
+|---|---|
+| Discoverability | 66.7 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 16.7 |
+| Access clarity | 43.4 |
 
-| Name | Description |
-|------|-------------|
-| Ordering | Online and digital ordering platforms, including Clover, Olo, and Qu. |
-| Point of Sale | Cloud and on-premise POS systems across both modern and legacy providers, sending guest and transaction data in real time. |
-| Third Party Delivery | Marketplace and delivery platforms feeding off-premise order data into guest profiles. |
-| Catering | First-party catering integrations capturing large-order and B2B guest activity. |
-| Payments | Payment processors, including Fiserv, FreedomPay, and Heartland. |
-| Loyalty | Loyalty and rewards platforms, including Punchh, Sparkfly, and Thanx, synced nightly. |
-| Feedback | Guest feedback and survey platforms, including Ovation and Tattle. |
-| Marketing | Marketing and messaging platforms, including Braze, Attentive, and Klaviyo. |
-| Reservations | Reservation platforms, including OpenTable, Resy, and Tock, synced nightly. |
+**Agent readiness 29.9** — agent-ready
 
-## Solutions
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | verified |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | verified |
+| Dynamic Client Registration | yes |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
 
-| Name | Description |
-|------|-------------|
-| Multi-Unit Restaurant Brands | Customer data platform purpose-built for large, multi-location restaurant brands such as Bojangles, MOD Pizza, Dave's Hot Chicken, and Long John Silver's, unifying guest data across thousands of locations. |
+**Regulatory alignment 29.4** — Horizontal (data, software, accessibility, platform)
 
-## Maintainers
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/bikky/](https://apis.io/providers/bikky/).
 
-**FN:** Kin Lane
+## How this profile is made
 
-**Email:** kin@apievangelist.com
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Bikky: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/bikky/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
